@@ -11,12 +11,12 @@ import org.springframework.data.repository.query.Param;
  * Github: https://github.com/dyc87112/
  */
 public interface UserInfoRepository extends JpaRepository<UserInfo, Long> {
-
+    
     UserInfo findByName(String name);
-
+    
     UserInfo findByNameAndAge(String name, Integer age);
-
-    @Query("from UserInfo u where u.name=:name")
-    UserInfo findUser(@Param("name") String name);
-
+    
+    @Query ("from UserInfo u where u.name=:name")
+    UserInfo findUser(@Param ("name") String name);
+    
 }

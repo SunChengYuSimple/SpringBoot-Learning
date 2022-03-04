@@ -10,9 +10,9 @@ import org.apache.ibatis.annotations.Param;
  * Github: https://github.com/dyc87112/
  */
 public interface UserMapper {
-
-    User findByName(@Param("name") String name);
-
-    int insert(@Param("name") String name, @Param("age") Integer age);
-
+    
+    User findByName(@Param ("name") String name);
+    
+    int insert(@Param ("name") String name, @Param ("age") Integer age);
+    
 }

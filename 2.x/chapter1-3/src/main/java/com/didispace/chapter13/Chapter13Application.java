@@ -10,28 +10,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 public class Chapter13Application {
-
+    
     public static void main(String[] args) {
         SpringApplication.run(Chapter13Application.class, args);
     }
-
+    
     @Slf4j
     @RestController
     static class HelloController {
-
-        @Value("${db:}")
+        
+        @Value ("${db:}")
         private String db;
-
-        @Value("${mq:}")
+        
+        @Value ("${mq:}")
         private String mq;
-
-        @RequestMapping("/")
+        
+        @RequestMapping ("/")
         public String index() {
             log.info("db：" + db);
             log.info("mq：" + mq);
             return "";
         }
-
+        
     }
-
+    
 }

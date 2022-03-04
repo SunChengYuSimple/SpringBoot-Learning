@@ -12,15 +12,15 @@ import org.springframework.data.repository.query.Param;
  * Blog: http://blog.didispace.com/
  * Github: https://github.com/dyc87112/
  */
-@CacheConfig(cacheNames = "users")
+@CacheConfig (cacheNames = "users")
 public interface UserRepository extends JpaRepository<User, Long> {
-
+    
     @Cacheable
     User findByName(String name);
-
+    
     User findByNameAndAge(String name, Integer age);
-
-    @Query("from User u where u.name=:name")
-    User findUser(@Param("name") String name);
-
+    
+    @Query ("from User u where u.name=:name")
+    User findUser(@Param ("name") String name);
+    
 }

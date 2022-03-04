@@ -106,7 +106,6 @@
 - [Spring Boot 2.x基础教程：使用log4j2记录日志](https://blog.didispace.com/spring-boot-learning-2-8-2)
 - [Spring Boot 2.x基础教程：使用tinylog记录日志](https://blog.didispace.com/spring-boot-learning-2-8-3)
 
-
 ### 其他内容
 
 - [Spring Boot自定义启动Banner](http://blog.didispace.com/spring-boot-banner/)

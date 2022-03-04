@@ -16,34 +16,34 @@ import java.nio.charset.StandardCharsets;
 
 @SpringBootApplication
 public class Chapter55Application {
-
+    
     private static String CHANNEL = "didispace";
-
+    
     public static void main(String[] args) {
         SpringApplication.run(Chapter55Application.class, args);
     }
-
+    
     @RestController
     static class RedisController {
-
+        
         private RedisTemplate<String, String> redisTemplate;
-
+        
         public RedisController(RedisTemplate<String, String> redisTemplate) {
             this.redisTemplate = redisTemplate;
         }
-
-        @GetMapping("/publish")
+        
+        @GetMapping ("/publish")
         public void publish(@RequestParam String message) {
             // 发送消息
             redisTemplate.convertAndSend(CHANNEL, message);
         }
-
+        
     }
-
+    
     @Slf4j
     @Service
     static class MessageSubscriber {
-
+        
         public MessageSubscriber(RedisTemplate redisTemplate) {
             RedisConnection redisConnection = redisTemplate.getConnectionFactory().getConnection();
             redisConnection.subscribe(new MessageListener() {
@@ -53,9 +53,9 @@ public class Chapter55Application {
                     log.info("Receive message : " + message);
                 }
             }, CHANNEL.getBytes(StandardCharsets.UTF_8));
-
+            
         }
-
+        
     }
-
+    
 }

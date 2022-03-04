@@ -13,28 +13,28 @@ import javax.sql.DataSource;
 
 @Configuration
 public class DataSourceConfiguration {
-
+    
     @Primary
     @Bean
-    @ConfigurationProperties(prefix = "spring.jta.atomikos.datasource.primary")
+    @ConfigurationProperties (prefix = "spring.jta.atomikos.datasource.primary")
     public DataSource primaryDataSource() {
         return new AtomikosDataSourceBean();
     }
-
+    
     @Bean
-    @ConfigurationProperties(prefix = "spring.jta.atomikos.datasource.secondary")
+    @ConfigurationProperties (prefix = "spring.jta.atomikos.datasource.secondary")
     public DataSource secondaryDataSource() {
         return new AtomikosDataSourceBean();
     }
-
+    
     @Bean
-    public JdbcTemplate primaryJdbcTemplate(@Qualifier("primaryDataSource") DataSource primaryDataSource) {
+    public JdbcTemplate primaryJdbcTemplate(@Qualifier ("primaryDataSource") DataSource primaryDataSource) {
         return new JdbcTemplate(primaryDataSource);
     }
-
+    
     @Bean
-    public JdbcTemplate secondaryJdbcTemplate(@Qualifier("secondaryDataSource") DataSource secondaryDataSource) {
+    public JdbcTemplate secondaryJdbcTemplate(@Qualifier ("secondaryDataSource") DataSource secondaryDataSource) {
         return new JdbcTemplate(secondaryDataSource);
     }
-
+    
 }

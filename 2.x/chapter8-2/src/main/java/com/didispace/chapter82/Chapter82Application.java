@@ -12,15 +12,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 @SpringBootApplication
 public class Chapter82Application {
-
+    
     public static void main(String[] args) {
         SpringApplication.run(Chapter82Application.class, args);
-
+        
         log.error("Hello World");
         log.warn("Hello World");
         log.info("Hello World");
         log.debug("Hello World");
         log.trace("Hello World");
     }
-
+    
 }

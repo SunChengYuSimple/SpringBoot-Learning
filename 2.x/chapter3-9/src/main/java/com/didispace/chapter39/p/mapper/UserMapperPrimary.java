@@ -13,14 +13,14 @@ import org.apache.ibatis.annotations.Select;
  * Github: https://github.com/dyc87112/
  */
 public interface UserMapperPrimary {
-
-    @Select("SELECT * FROM USER WHERE NAME = #{name}")
-    UserPrimary findByName(@Param("name") String name);
-
-    @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
-    int insert(@Param("name") String name, @Param("age") Integer age);
-
-    @Delete("DELETE FROM USER")
+    
+    @Select ("SELECT * FROM USER WHERE NAME = #{name}")
+    UserPrimary findByName(@Param ("name") String name);
+    
+    @Insert ("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
+    int insert(@Param ("name") String name, @Param ("age") Integer age);
+    
+    @Delete ("DELETE FROM USER")
     int deleteAll();
-
+    
 }

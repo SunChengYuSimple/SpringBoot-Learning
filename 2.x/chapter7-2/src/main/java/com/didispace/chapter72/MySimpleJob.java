@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class MySimpleJob implements SimpleJob {
-
+    
     @Override
     public void execute(ShardingContext context) {
         log.info("MySimpleJob start : didispace.com {}", System.currentTimeMillis());
     }
-
+    
 }

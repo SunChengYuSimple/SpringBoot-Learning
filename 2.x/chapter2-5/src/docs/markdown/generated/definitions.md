@@ -1,11 +1,12 @@
-
 <a name="definitions"></a>
+
 ## Definitions
 
 <a name="user"></a>
-### User
-用户实体
 
+### User
+
+用户实体
 
 |Name|Description|Schema|
 |---|---|---|

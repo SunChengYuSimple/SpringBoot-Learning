@@ -9,17 +9,17 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
 
-@SpringBootTest(classes = Chapter312Application.class)
+@SpringBootTest (classes = Chapter312Application.class)
 public class Chapter312ApplicationTests {
-
+    
     @Autowired
     protected JdbcTemplate primaryJdbcTemplate;
     @Autowired
     protected JdbcTemplate secondaryJdbcTemplate;
-
+    
     @Autowired
     private TestService testService;
-
+    
     @Test
     public void test1() throws Exception {
         // 正确更新的情况
@@ -27,7 +27,7 @@ public class Chapter312ApplicationTests {
         Assertions.assertEquals(30, primaryJdbcTemplate.queryForObject("select age from user where name=?", Integer.class, "aaa"));
         Assertions.assertEquals(30, secondaryJdbcTemplate.queryForObject("select age from user where name=?", Integer.class, "aaa"));
     }
-
+    
     @Test
     public void test2() throws Exception {
         // 更新失败的情况
@@ -41,5 +41,5 @@ public class Chapter312ApplicationTests {
             Assertions.assertEquals(30, secondaryJdbcTemplate.queryForObject("select age from user where name=?", Integer.class, "aaa"));
         }
     }
-
+    
 }

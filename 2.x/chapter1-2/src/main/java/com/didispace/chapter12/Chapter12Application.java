@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 public class Chapter12Application {
-
+    
     public static void main(String[] args) {
         SpringApplication.run(Chapter12Application.class, args);
     }
-
+    
     @RestController
     static class HelloController {
-
-        @Value("${name:}")
+        
+        @Value ("${name:}")
         private String name;
-
-        @RequestMapping("/")
+        
+        @RequestMapping ("/")
         public String index() {
             return name;
         }
-
+        
     }
-
+    
 }

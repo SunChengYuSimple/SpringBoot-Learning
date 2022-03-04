@@ -12,14 +12,14 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 public class User implements Serializable {
-
+    
     @Id
     @GeneratedValue
     private Long id;
-
+    
     private String name;
     private Integer age;
-
+    
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;

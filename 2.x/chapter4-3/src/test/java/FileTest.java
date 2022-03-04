@@ -15,18 +15,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@SpringBootTest(classes = Chapter43Application.class)
+@SpringBootTest (classes = Chapter43Application.class)
 public class FileTest {
-
+    
     @Autowired
     protected WebApplicationContext context;
     protected MockMvc mvc;
-
+    
     @BeforeEach
     public void setUp() {
         mvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
-
+    
     @Test
     public void uploadFile() throws Exception {
         MockMultipartFile file = new MockMultipartFile(
@@ -35,7 +35,7 @@ public class FileTest {
                 MediaType.TEXT_PLAIN_VALUE,
                 "Hello, World!".getBytes()
         );
-
+        
         final MvcResult result = mvc.perform(
                 MockMvcRequestBuilders
                         .multipart("/upload")
@@ -44,5 +44,5 @@ public class FileTest {
                 .andExpect(status().isOk())
                 .andReturn();
     }
-
+    
 }

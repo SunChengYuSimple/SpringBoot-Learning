@@ -115,7 +115,6 @@
 - [使用Spring StateMachine框架实现状态机](http://blog.didispace.com/spring-statemachine/)
 - [Spring Boot应用的后台运行配置](http://blog.didispace.com/spring-boot-run-backend/)
 
-
 ## 进阶与深入
 
 - [什么时候不要使用@Autowire](http://blog.didispace.com/when-not-use-autowire-in-spring-boot/)
@@ -138,7 +137,7 @@
 ### 2.x版本信息
 
 - [Spring Boot 2.2 正式发布，大幅性能提升 + Java 13 支持](http://blog.didispace.com/spring-boot-2-2-release/)
-- [Spring Boot 2.3.0 发布](/spring-boot-2-3-0-release/) 
+- [Spring Boot 2.3.0 发布](/spring-boot-2-3-0-release/)
 - [Spring Boot 2.3.0 放弃 Maven 转投 Gradle](/spring-boot-gradle/)
 - [Spring Boot 2.3.2 发布，解决 Too many open files 导致的应用宕机问题](http://blog.didispace.com/spring-boot-2-3-2-release/)
 - [Spring Boot 2.4.0 正式发布！全新的配置处理机制，拥抱云原生！](http://blog.didispace.com/spring-boot-2-4-0-ga/)
@@ -150,8 +149,10 @@
 
 - [我的博客](http://blog.didispace.com)：分享平时学习和实践过的技术内容
 - [知识星球](https://t.xiaomiquan.com/zfEiY3v)：聊聊技术人的斜杠生活
-- [Spring Boot基础教程](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网Star最多的免费Spring Boot基础教程
-- [Spring Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网最早最全的免费Spring Cloud基础教程
+- [Spring Boot基础教程](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网Star最多的免费Spring
+  Boot基础教程
+- [Spring Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)：全网最早最全的免费Spring
+  Cloud基础教程
 
 ## 我的公众号
 

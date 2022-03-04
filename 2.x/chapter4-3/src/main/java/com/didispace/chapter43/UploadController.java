@@ -16,24 +16,24 @@ import java.nio.file.Files;
 @Controller
 @Slf4j
 public class UploadController {
-
-    @Value("${file.upload.path}")
+    
+    @Value ("${file.upload.path}")
     private String path;
-
-    @GetMapping("/")
+    
+    @GetMapping ("/")
     public String uploadPage() {
         return "upload";
     }
-
-    @PostMapping("/upload")
+    
+    @PostMapping ("/upload")
     @ResponseBody
     public String create(@RequestPart MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
         String filePath = path + fileName;
-
+        
         File dest = new File(filePath);
         Files.copy(file.getInputStream(), dest.toPath());
         return "Upload file success : " + dest.getAbsolutePath();
     }
-
+    
 }

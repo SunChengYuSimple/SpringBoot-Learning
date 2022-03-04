@@ -11,12 +11,12 @@ import org.springframework.data.repository.query.Param;
  * Github: https://github.com/dyc87112/
  */
 public interface UserRepository extends JpaRepository<User, Long> {
-
+    
     User findByName(String name);
-
+    
     User findByNameAndAge(String name, Integer age);
-
-    @Query("from User u where u.name=:name")
-    User findUser(@Param("name") String name);
-
+    
+    @Query ("from User u where u.name=:name")
+    User findUser(@Param ("name") String name);
+    
 }

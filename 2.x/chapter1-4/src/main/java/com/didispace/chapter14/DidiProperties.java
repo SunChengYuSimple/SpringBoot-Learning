@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "com.didispace")
+@ConfigurationProperties (prefix = "com.didispace")
 public class DidiProperties {
-
+    
     /**
      * 这是一个测试配置
      */
     private String from;
-
+    
 }

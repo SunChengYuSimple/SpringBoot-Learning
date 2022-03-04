@@ -10,18 +10,18 @@ import javax.validation.constraints.Max;
 @Data
 @NoArgsConstructor
 public class User {
-
+    
     @Id
     @GeneratedValue
     private Long id;
-
+    
     private String name;
-    @Max(50)
+    @Max (50)
     private Integer age;
-
+    
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
-
+    
 }

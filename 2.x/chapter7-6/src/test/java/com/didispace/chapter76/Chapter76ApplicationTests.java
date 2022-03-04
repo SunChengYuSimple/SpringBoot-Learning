@@ -10,23 +10,23 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 @SpringBootTest
 public class Chapter76ApplicationTests {
-
+    
     @Autowired
     private AsyncTasks asyncTasks;
-
+    
     @Test
     public void test1() throws Exception {
         long start = System.currentTimeMillis();
-
+        
         CompletableFuture<String> task1 = asyncTasks.doTaskOne();
         CompletableFuture<String> task2 = asyncTasks.doTaskTwo();
         CompletableFuture<String> task3 = asyncTasks.doTaskThree();
-
+        
         CompletableFuture.allOf(task1, task2, task3).join();
-
+        
         long end = System.currentTimeMillis();
-
+        
         log.info("任务全部完成，总耗时：" + (end - start) + "毫秒");
     }
-
+    
 }

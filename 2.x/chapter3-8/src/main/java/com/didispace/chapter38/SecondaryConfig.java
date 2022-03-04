@@ -20,32 +20,32 @@ import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(
-        entityManagerFactoryRef="entityManagerFactorySecondary",
-        transactionManagerRef="transactionManagerSecondary",
-        basePackages= { "com.didispace.chapter38.s" }) //设置Repository所在位置
+@EnableJpaRepositories (
+        entityManagerFactoryRef = "entityManagerFactorySecondary",
+        transactionManagerRef = "transactionManagerSecondary",
+        basePackages = {"com.didispace.chapter38.s"}) //设置Repository所在位置
 public class SecondaryConfig {
-
+    
     @Autowired
-    @Qualifier("secondaryDataSource")
+    @Qualifier ("secondaryDataSource")
     private DataSource secondaryDataSource;
-
+    
     @Autowired
     private JpaProperties jpaProperties;
     @Autowired
     private HibernateProperties hibernateProperties;
-
+    
     private Map<String, Object> getVendorProperties() {
         return hibernateProperties.determineHibernateProperties(jpaProperties.getProperties(), new HibernateSettings());
     }
-
-    @Bean(name = "entityManagerSecondary")
+    
+    @Bean (name = "entityManagerSecondary")
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
         return entityManagerFactorySecondary(builder).getObject().createEntityManager();
     }
-
-    @Bean(name = "entityManagerFactorySecondary")
-    public LocalContainerEntityManagerFactoryBean entityManagerFactorySecondary (EntityManagerFactoryBuilder builder) {
+    
+    @Bean (name = "entityManagerFactorySecondary")
+    public LocalContainerEntityManagerFactoryBean entityManagerFactorySecondary(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(secondaryDataSource)
                 .packages("com.didispace.chapter38.s") //设置实体类所在位置
@@ -53,10 +53,10 @@ public class SecondaryConfig {
                 .properties(getVendorProperties())
                 .build();
     }
-
-    @Bean(name = "transactionManagerSecondary")
+    
+    @Bean (name = "transactionManagerSecondary")
     PlatformTransactionManager transactionManagerSecondary(EntityManagerFactoryBuilder builder) {
         return new JpaTransactionManager(entityManagerFactorySecondary(builder).getObject());
     }
-
+    
 }

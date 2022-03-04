@@ -16,29 +16,29 @@ import java.nio.file.Files;
 @Controller
 @Slf4j
 public class UploadController {
-
-    @Value("${file.upload.path}")
+    
+    @Value ("${file.upload.path}")
     private String path;
-
-    @GetMapping("/")
+    
+    @GetMapping ("/")
     public String uploadPage() {
         return "upload";
     }
-
-    @PostMapping("/upload")
+    
+    @PostMapping ("/upload")
     @ResponseBody
     public String create(@RequestPart MultipartFile[] files) throws IOException {
         StringBuffer message = new StringBuffer();
-
+        
         for (MultipartFile file : files) {
             String fileName = file.getOriginalFilename();
             String filePath = path + fileName;
-
+            
             File dest = new File(filePath);
             Files.copy(file.getInputStream(), dest.toPath());
             message.append("Upload file success : " + dest.getAbsolutePath()).append("<br>");
         }
         return message.toString();
     }
-
+    
 }

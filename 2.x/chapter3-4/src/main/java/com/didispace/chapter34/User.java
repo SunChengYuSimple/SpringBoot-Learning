@@ -11,14 +11,14 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 public class User {
-
+    
     @Id
     @GeneratedValue
     private Long id;
-
+    
     private String name;
     private Integer age;
-
+    
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;

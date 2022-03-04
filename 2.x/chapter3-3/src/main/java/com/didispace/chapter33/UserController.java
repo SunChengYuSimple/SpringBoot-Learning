@@ -16,32 +16,32 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 public class UserController {
-
+    
     private UserService userService;
-
-    @PostMapping("/user")
+    
+    @PostMapping ("/user")
     public int create(@RequestBody User user) {
         return userService.create(user.getName(), user.getAge());
     }
-
-    @GetMapping("/user/{name}")
+    
+    @GetMapping ("/user/{name}")
     public List<User> getByName(@PathVariable String name) {
         return userService.getByName(name);
     }
-
-    @DeleteMapping("/user/{name}")
+    
+    @DeleteMapping ("/user/{name}")
     public int deleteByName(@PathVariable String name) {
         return userService.deleteByName(name);
     }
-
-    @GetMapping("/user/count")
+    
+    @GetMapping ("/user/count")
     public int getAllUsers() {
         return userService.getAllUsers();
     }
-
-    @DeleteMapping("/user/all")
+    
+    @DeleteMapping ("/user/all")
     public int deleteAllUsers() {
         return userService.deleteAllUsers();
     }
-
+    
 }

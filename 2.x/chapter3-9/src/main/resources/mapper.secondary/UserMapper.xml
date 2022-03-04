@@ -6,11 +6,14 @@
 <mapper namespace="com.didispace.chapter39.s.mapper.UserMapperSecondary">
 
     <select id="findByName" resultType="com.didispace.chapter39.s.entity.UserSecondary">
-        SELECT * FROM USER WHERE NAME = #{name}
+        SELECT *
+        FROM USER
+        WHERE NAME = #{name}
     </select>
 
     <insert id="insert">
-        INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})
+        INSERT INTO USER(NAME, AGE)
+        VALUES (#{name}, #{age})
     </insert>
 
 </mapper>

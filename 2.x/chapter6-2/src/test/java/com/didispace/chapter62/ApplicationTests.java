@@ -8,19 +8,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Slf4j
 @SpringBootTest
 public class ApplicationTests {
-
+    
     @Autowired
     private PersonRepository personRepository;
-
+    
     @Test
     public void findAll() {
-
+        
         personRepository.findAll().forEach(p -> {
             System.out.println(p);
         });
-
+        
     }
-
+    
     @Test
     public void save() {
         Person person = new Person();
@@ -29,10 +29,10 @@ public class ApplicationTests {
         person.setCommonName("aaa");
         person.setUserPassword("123456");
         personRepository.save(person);
-
+        
         personRepository.findAll().forEach(p -> {
             System.out.println(p);
         });
     }
-
+    
 }

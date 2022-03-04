@@ -7,9 +7,9 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 @EnableOpenApi
 @SpringBootApplication
 public class Chapter27Application {
-
+    
     public static void main(String[] args) {
         SpringApplication.run(Chapter27Application.class, args);
     }
-
+    
 }

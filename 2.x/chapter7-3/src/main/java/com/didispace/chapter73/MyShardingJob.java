@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class MyShardingJob implements SimpleJob {
-
+    
     @Override
     public void execute(ShardingContext context) {
         // sharding-total-count=3，所以任务被分为三个分片
@@ -24,5 +24,5 @@ public class MyShardingJob implements SimpleJob {
                 break;
         }
     }
-
+    
 }

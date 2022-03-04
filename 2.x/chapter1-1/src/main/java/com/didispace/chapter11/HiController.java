@@ -5,13 +5,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 控制器
+ *
  * @author Oliver
  */
 @RestController
-@RequestMapping("/hiController")
+@RequestMapping ("/hiController")
 public class HiController {
-    @RequestMapping("/hello")
-    public String hello(){
+    @RequestMapping ("/hello")
+    public String hello() {
         return "Hello Spring Boot 2";
     }
 }

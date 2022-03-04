@@ -15,12 +15,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JacksonXmlRootElement(localName = "User")
+@JacksonXmlRootElement (localName = "User")
 public class User {
-
-    @JacksonXmlProperty(localName = "name")
+    
+    @JacksonXmlProperty (localName = "name")
     private String name;
-    @JacksonXmlProperty(localName = "age")
+    @JacksonXmlProperty (localName = "age")
     private Integer age;
-
+    
 }

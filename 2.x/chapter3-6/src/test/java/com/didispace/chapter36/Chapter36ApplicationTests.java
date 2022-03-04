@@ -13,14 +13,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@RunWith(SpringRunner.class)
+@RunWith (SpringRunner.class)
 @SpringBootTest
 @Transactional
 public class Chapter36ApplicationTests {
-
+    
     @Autowired
     private UserMapper userMapper;
-
+    
     @Test
     @Rollback
     public void test() throws Exception {
@@ -28,5 +28,5 @@ public class Chapter36ApplicationTests {
         User u = userMapper.findByName("AAA");
         Assert.assertEquals(20, u.getAge().intValue());
     }
-
+    
 }

@@ -10,10 +10,10 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 @Component
 public class AsyncTasks {
-
+    
     public static Random random = new Random();
-
-    @Async("taskExecutor1")
+    
+    @Async ("taskExecutor1")
     public CompletableFuture<String> doTaskOne(String taskNo) throws Exception {
         log.info("开始任务：{}", taskNo);
         long start = System.currentTimeMillis();
@@ -22,8 +22,8 @@ public class AsyncTasks {
         log.info("完成任务：{}，耗时：{} 毫秒", taskNo, end - start);
         return CompletableFuture.completedFuture("任务完成");
     }
-
-    @Async("taskExecutor2")
+    
+    @Async ("taskExecutor2")
     public CompletableFuture<String> doTaskTwo(String taskNo) throws Exception {
         log.info("开始任务：{}", taskNo);
         long start = System.currentTimeMillis();
@@ -32,5 +32,5 @@ public class AsyncTasks {
         log.info("完成任务：{}，耗时：{} 毫秒", taskNo, end - start);
         return CompletableFuture.completedFuture("任务完成");
     }
-
+    
 }
