@@ -1,18 +1,20 @@
-package com.didispace.chapter11;
+package com.oliver.experiment.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 控制器
- *
+ * 测试 Controller
  * @author Oliver
  */
 @RestController
-@RequestMapping ("/hiController")
-public class HiController {
-    @RequestMapping ("/hello")
-    public String hello() {
+@RequestMapping("/helloController")
+public class HelloController {
+    
+    @RequestMapping("/hello")
+    public String hello(){
         return "Hello Spring Boot 2";
     }
+    
+    
 }

@@ -1,0 +1,43 @@
+# 默认激活dev配置
+spring:
+  profiles:
+    active: "dev"
+    group:
+      # 同时使用两个配置，顺序加载配置（参数冲突时，使用最后面配置的参数）
+      # YAML 加载顺序有优先级之分
+      "dev": "dev-db,dev-mq"
+      # 两种方式等价
+      "prod":
+        - "prod-db"
+        - "prod-mq"
+# 配置使用全小写加载方式 推荐使用全小写配合-分隔符的方式来配置，比如：spring.jpa.database-platform=mysql
+Server:
+  port: 8023
+---
+spring:
+  config:
+    activate:
+      on-profile: "dev-db"
+db: dev-db.oliver.com
+server:
+  port: 8081
+---
+spring:
+  config:
+    activate:
+      on-profile: "dev-mq"
+mq: dev-mq.oliver.com
+server:
+  port: 8082
+---
+spring:
+  config:
+    activate:
+      on-profile: "prod-db"
+db: prod-db.oliver.com
+---
+spring:
+  config:
+    activate:
+      on-profile: "prod-mq"
+mq: prod-mq.oliver.com
