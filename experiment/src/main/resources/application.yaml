@@ -10,9 +10,25 @@ spring:
       "prod":
         - "prod-db"
         - "prod-mq"
+# 访问 http://localhost:port/swagger-ui.html
+swagger:
+  title: 项目接口文档
+  description: 综合项目接口文档
+  version: 0.0.1
+  license: 许可证
+  license-url: 许可证URL
+  terms-of-service-url: 服务条款URLe
+  contact:
+    name: Oliver
+    url: baidu.com
+    email: n.sunchengyu@gmail.com
+  # swagger扫描的基础包，默认：全扫描
+  # base-package: com.oliver.*
+  # 需要处理的基础URL规则，默认：/**
+  # base-path: /**
 # 配置使用全小写加载方式 推荐使用全小写配合-分隔符的方式来配置，比如：spring.jpa.database-platform=mysql
-#Server:
-#  port: 8023
+Server:
+  port: 8080
 ---
 spring:
   config:

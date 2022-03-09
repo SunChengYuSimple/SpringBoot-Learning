@@ -16,7 +16,7 @@ public class PropertiesController {
     private String db;
     
     /**
-     * 从 ymal 配置文件中获取参数
+     * 从 yaml 配置文件中获取参数
      */
     @Value("${mq:}")
     private String mq;
