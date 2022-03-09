@@ -11,6 +11,7 @@
     <modules>
         <!-- 默认使用2.x教程下的工程，如果要用1.x的可修改下面的module -->
         <module>2.x</module>
+        <module>experiment</module>
     </modules>
 
 </project>

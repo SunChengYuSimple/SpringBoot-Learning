@@ -11,8 +11,8 @@ spring:
         - "prod-db"
         - "prod-mq"
 # 配置使用全小写加载方式 推荐使用全小写配合-分隔符的方式来配置，比如：spring.jpa.database-platform=mysql
-Server:
-  port: 8023
+#Server:
+#  port: 8023
 ---
 spring:
   config:
