@@ -10,7 +10,7 @@ Thumbs.db
 ._.DS_Store
 logs
 target
-*.iml
+#*.iml
 .idea
 
 HELP.md

@@ -10,6 +10,17 @@ spring:
       "prod":
         - "prod-db"
         - "prod-mq"
+# 打印请求日志
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestMappingHandlerMapping: trace
 # 访问 http://localhost:port/swagger-ui.html
 swagger:
   title: 项目接口文档
@@ -35,16 +46,16 @@ spring:
     activate:
       on-profile: "dev-db"
 db: dev-db.oliver.com
-server:
-  port: 8081
+#server:
+#  port: 8081
 ---
 spring:
   config:
     activate:
       on-profile: "dev-mq"
 mq: dev-mq.oliver.com
-server:
-  port: 8082
+#server:
+#  port: 8082
 ---
 spring:
   config:

@@ -9,20 +9,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Oliver
  */
 @RestController
-@RequestMapping("/propertiesController")
+@RequestMapping ("/propertiesController")
 public class PropertiesController {
-    
-    @Value("${db:}")
+
+    @Value ("${db:}")
     private String db;
-    
+
     /**
      * 从 yaml 配置文件中获取参数
      */
-    @Value("${mq:}")
+    @Value ("${mq:}")
     private String mq;
-    
-    @RequestMapping("properties")
-    public String properties(){
-        return db+"<br/>"+mq;
+
+    @RequestMapping ("properties")
+    public String properties () {
+        return db + "<br/>" + mq;
     }
 }

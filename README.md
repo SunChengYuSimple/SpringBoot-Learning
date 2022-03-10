@@ -26,7 +26,7 @@
 - [Spring Boot 2.x基础教程：使用Swagger2构建强大的API文档](http://blog.didispace.com/spring-boot-learning-21-2-2/)
 - [Spring Boot 2.x基础教程：JSR-303实现请求参数校验](http://blog.didispace.com/spring-boot-learning-21-2-3/)
 - [Spring Boot 2.x基础教程：Swagger接口分类与各元素排序问题详解](http://blog.didispace.com/spring-boot-learning-21-2-4/)
-- [Spring Boot 2.x基础教程：Swagger静态文档的生成](http://blog.didispace.com/spring-boot-learning-21-2-5/)
+- [Spring Boot 2.x基础教程：Swagger静态文档的生成](http://blog.didispace.com/spring-boot-learning-21-2-5/)!!!
 - [Spring Boot 2.x基础教程：找回启动日志中的请求路径列表](http://blog.didispace.com/spring-boot-learning-21-2-6/)
 - [Spring Boot 2.x基础教程：使用SpringFox 3生成Swagger文档](http://blog.didispace.com/spring-boot-learning-21-2-7/)
 - [Spring Boot 2.x基础教程：如何扩展XML格式的请求和响应](http://blog.didispace.com/spring-boot-learning-21-2-8/)
@@ -130,11 +130,3 @@
 - [Spring Boot 2.4.1 发布，修正大量2.4全新配置机制的Bug](http://blog.didispace.com/spring-boot-2-4-1-release/)
 - [Spring Boot 2.5.0 发布：支持Java16、Gradle 7、Datasource初始化调整](https://blog.didispace.com/spring-boot-2-5-0-release/)
 - [Spring Boot 2.5.1 发布](https://blog.didispace.com/spring-boot-2-5-1-release/)
-
-## 我的公众号
-
-<img src="https://blog.didispace.com/css/images/weixin.jpg" style="width:150px;height:150px;" />
-
-## 推荐我的书
-
-![Spring Boot微服务实战](https://git.oschina.net/uploads/images/2017/0416/233656_dd3bce94_437188.png)

@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Oliver
  */
 @RestController
-@RequestMapping("/helloController")
+@RequestMapping ("/helloController")
 public class HelloController {
-    
-    @RequestMapping("/hello")
-    public String hello(){
+
+    @RequestMapping ("/hello")
+    public String hello () {
         return "Hello Spring Boot 2";
     }
-    
-    
+
+
 }

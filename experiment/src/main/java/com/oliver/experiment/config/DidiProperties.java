@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Configuration;
  */
 @Data
 @Configuration
-@ConfigurationProperties("com.oliver")
+@ConfigurationProperties ("com.oliver")
 public class DidiProperties {
-    
+
     /**
      * 这是一个测试配置
      * 在 pom.xml 中添加自动生成配置元数据的依赖
