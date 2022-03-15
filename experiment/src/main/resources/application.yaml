@@ -10,6 +10,19 @@ spring:
       "prod":
         - "prod-db"
         - "prod-mq"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microsoft?serverTimezone=Asia/Shanghai
+    username: root
+    password: 50109991
+mybatis-plus:
+  mapper-locations: classpath:com/oliver/experiment/mapper/*.xml
+  type-aliases-package: com.oliver.experiment.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
 # 打印请求日志
 logging:
   level:
@@ -40,6 +53,7 @@ swagger:
 # 配置使用全小写加载方式 推荐使用全小写配合-分隔符的方式来配置，比如：spring.jpa.database-platform=mysql
 Server:
   port: 8080
+
 ---
 spring:
   config:

@@ -1,8 +1,10 @@
 package com.oliver.experiment.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.*;
 
@@ -13,7 +15,9 @@ import javax.validation.constraints.*;
  * @description 用户实体类
  */
 @Data
+@NoArgsConstructor
 @ApiModel (description = "用户实体")
+@TableName("user")
 public class User {
 
     @ApiModelProperty (value = "用户编号", position = 1)

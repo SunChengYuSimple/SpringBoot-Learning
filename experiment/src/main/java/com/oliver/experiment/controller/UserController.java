@@ -1,9 +1,12 @@
 package com.oliver.experiment.controller;
 
 import com.oliver.experiment.domain.User;
+import com.oliver.experiment.mapper.UserMapper;
+import com.oliver.experiment.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,6 +23,9 @@ import java.util.*;
 @RequestMapping ("/user")
 public class UserController {
 
+    @Autowired
+    private UserService userService;
+    
     /**
      * 创建线程安全的Map，模拟users信息的存储
      */
@@ -34,7 +40,7 @@ public class UserController {
     @ApiOperation ("获取用户列表")
     public List<User> getUserList () {
         // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
-        return new ArrayList<> (users.values ());
+        return userService.getUserList();
     }
 
     /**
